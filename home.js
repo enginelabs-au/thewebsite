@@ -538,7 +538,7 @@ if (document.querySelector('.space')) startSpace({ canvas: document.querySelecto
     return { href: 'https://' + host, host, name: a.querySelector('.cap b').textContent };
   });
   const frame = v.querySelector('.vframe'), reel = v.querySelector('.vreel');
-  const btn = v.querySelector('.vmenu-btn'), out = v.querySelector('.vout'), trail = v.querySelector('.vtrail');
+  const btn = v.querySelector('.vmenu-btn'), out = v.querySelector('.vout');
   const title = document.title;
 
   sites.forEach((s, i) => {
@@ -546,10 +546,20 @@ if (document.querySelector('.space')) startSpace({ canvas: document.querySelecto
     b.type = 'button';
     b.className = 'vpick';
     b.dataset.i = i;
-    b.innerHTML = '<span></span>';
-    b.querySelector('span').textContent = s.name;
+    b.innerHTML = '<span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr"></span></span><span class="screen"><iframe tabindex="-1" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span><span class="vname"></span>';
+    b.querySelector('.addr').textContent = s.host;
+    b.querySelector('.vname').textContent = s.name;
+    const view = b.querySelector('iframe');
+    view.title = s.name;
+    view.dataset.src = s.href;
     reel.append(b);
   });
+  let armed = false;
+  function armReel() {
+    if (armed) return;
+    armed = true;
+    reel.querySelectorAll('iframe').forEach(f => { f.src = f.dataset.src; });
+  }
 
   const current = () => sites.findIndex(s => location.hash === '#/' + s.host);
   const go = i => { location.hash = '#/' + sites[(i + sites.length) % sites.length].host; };
@@ -566,10 +576,10 @@ if (document.querySelector('.space')) startSpace({ canvas: document.querySelecto
     }
     const s = sites[i];
     v.hidden = false;
+    armReel();
     if (frame.getAttribute('src') !== s.href) frame.src = s.href;
     out.href = s.href;
     out.textContent = s.host + ' ↗';
-    trail.textContent = '/' + String(i + 1).padStart(2, '0');
     document.title = s.name + ' — thewebpage.com.au';
     reel.querySelectorAll('.vpick').forEach((b, k) => b.classList.toggle('is-on', k === i));
   }

@@ -298,14 +298,14 @@ h1 em {
 .vbar { position: absolute; inset: 0 0 auto; z-index: 2; height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(12px, 2.4vw, 32px); background: #06070c; border-bottom: 1px solid rgba(255, 255, 255, .085); font-size: 12px; letter-spacing: .04em; }
 .vbar a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: #9097ab; text-decoration: none; }
 .vbar a:hover, .vbar .vhome { color: #eef0f7; }
-.vtrail { color: #9097ab; }
 .vmenu { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; }
 .vmenu-btn { min-height: 36px; padding: 0 14px; border: 1px solid rgba(255, 255, 255, .2); border-radius: 8px; background: rgba(6, 7, 12, .85); color: #eef0f7; font: 400 12px / 1 'DM Mono', ui-monospace, Menlo, monospace; letter-spacing: .03em; cursor: pointer; }
 .vmenu-btn:hover { border-color: #eef0f7; }
 .vreel { display: flex; gap: 8px; margin-top: 8px; padding: 8px; max-width: min(880px, 92vw); overflow-x: auto; border: 1px solid rgba(255, 255, 255, .14); border-radius: 10px; background: rgba(6, 7, 12, .96); }
 .vreel[hidden] { display: none; }
-.vpick { flex: 0 0 auto; white-space: nowrap; padding: 0; overflow: hidden; border: 1px solid rgba(255, 255, 255, .14); border-radius: 8px; background: #0d1018; color: #eef0f7; font: 400 11px / 1.2 'DM Mono', ui-monospace, Menlo, monospace; text-align: left; cursor: pointer; }
-.vpick span { display: block; padding: 10px 14px; }
+.vpick { flex: 0 0 176px; padding: 0; overflow: hidden; border: 1px solid rgba(255, 255, 255, .14); border-radius: 10px; background: #0d1018; color: #eef0f7; font: 400 11px / 1.2 'DM Mono', ui-monospace, Menlo, monospace; text-align: left; cursor: pointer; }
+.vpick .frame { border-radius: 0; box-shadow: none; }
+.vpick .vname { display: block; padding: 8px 10px 10px; }
 .vpick:hover, .vpick.is-on { border-color: #eef0f7; }
 .varrow { position: absolute; top: 50%; z-index: 3; width: 42px; height: 72px; margin-top: -36px; border: 1px solid rgba(255, 255, 255, .3); border-radius: 8px; background: rgba(6, 7, 12, .72); color: #eef0f7; font: 400 32px / 1 'DM Mono', ui-monospace, Menlo, monospace; cursor: pointer; }
 .varrow.prev { left: 8px; }
