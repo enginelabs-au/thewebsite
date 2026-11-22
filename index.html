@@ -2,80 +2,107 @@
 <html lang="en-AU">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>thewebsite.com.au — every website wraps the next</title>
-  <meta name="description" content="A website about websites. Every website wraps the next.">
-  <meta name="theme-color" content="#060908">
-  <meta property="og:title" content="thewebsite.com.au">
-  <meta property="og:description" content="Every website, wrapped in the next.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>thewebpage.com.au — a webpage of webpages</title>
+  <meta name="description" content="Eight sites by Cam Douglas, floating in one place.">
+  <meta name="theme-color" content="#06070c">
+  <meta property="og:title" content="thewebpage.com.au">
+  <meta property="og:description" content="A webpage of webpages.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="main.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js" defer></script>
 </head>
 <body>
   <!--
     ADDING A SITE
-    Append one object to PROJECTS in main.js:
-      { name, url, shot, embed }
-    name  — corner label
-    url   — host only
-    shot  — /shots preview used while zooming (and if embed is false)
-    embed — false if the site blocks iframes (X-Frame-Options)
+    Copy one <li> below and give it a new .sN class in home.css: --l/--t/--w place
+    it in the bunch (percent of the cluster), --ry/--rx turn it, --d is its depth
+    for parallax, --tint its accent (it also lights the fabric around it).
+    Each window shows the live site in a scaled-down frame, so the site must allow
+    being framed by thewebpage.com.au (no X-Frame-Options / frame-ancestors block).
   -->
-  <div class="w3 is-latched" data-w3="root" tabindex="0" aria-label="thewebsite.com.au. Turn the dial to choose a scroll mode, then press refresh to turn that mode on or off. Hover the dial to read how the mode works.">
-    <div class="w3-sticky">
-      <h1 class="w3-sr">thewebsite.com.au — every website wraps the next</h1>
-      <p class="w3-sr" data-w3="live" aria-live="polite">Now showing 00, thewebsite.com.au.</p>
+  <canvas class="space" aria-hidden="true"></canvas>
 
-      <!-- latched site: live page (or shot fallback) -->
-      <div class="w3-page" data-w3="page" hidden>
-        <iframe class="w3-frame" data-w3="frame" title="Site" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="w3-page-shot" data-w3="pageshot" hidden></div>
-      </div>
+  <header class="top">
+    <a class="mark" href="/">thewebpage.com.au</a>
+    <a href="https://camdouglas.com">contact</a>
+  </header>
 
-      <!-- nested layers (visual tunnel / centre portal) -->
-      <div class="w3-stage" data-w3="stage" aria-hidden="true"></div>
-      <div class="w3-portal" data-w3="portal"><span>Scroll here to see more.</span></div>
-      <div class="w3-rail" data-w3="rail">scroll</div>
-      <div class="w3-edge is-top" data-w3="edge"></div>
-      <div class="w3-edge is-bottom" data-w3="edge"></div>
-      <div class="w3-seam" data-w3="seam">Scroll for the next site</div>
-      <div class="w3-bay" data-w3="bay">Scroll here</div>
-      <div class="w3-hold" data-w3="hold">Hold</div>
-      <div class="w3-catch" data-w3="catch" hidden></div>
+  <main>
+    <section class="hero">
+      <h1>A webpage <em>of webpages.</em></h1>
+    </section>
 
-      <!-- outer border: zoom between layers when latched -->
-      <div class="w3-zoom" data-w3="zoom" aria-hidden="true">
-        <i class="is-t"></i><i class="is-r"></i><i class="is-b"></i><i class="is-l"></i>
-      </div>
+    <ul class="cluster" aria-label="Sites">
+      <li class="s1">
+        <a class="win" href="#/z0rb.ai">
+          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">z0rb.ai</span></span><span class="screen"><iframe src="https://z0rb.ai" title="z0rb" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
+          <span class="cap"><b>z0rb</b><span class="d">A public feed for AI agents</span></span>
+        </a>
+      </li>
+      <li class="s2">
+        <a class="win" href="#/yournewhandle.com">
+          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">yournewhandle.com</span></span><span class="screen"><iframe src="https://yournewhandle.com" title="yournewhandle" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
+          <span class="cap"><b>yournewhandle</b><span class="d">One handle, 354 platforms, one search</span></span>
+        </a>
+      </li>
+      <li class="s3">
+        <a class="win" href="#/hertzlabs.com.au">
+          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">hertzlabs.com.au</span></span><span class="screen"><iframe src="https://hertzlabs.com.au" title="Hertz Labs" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
+          <span class="cap"><b>Hertz Labs</b><span class="d">Binaural beats, engineered</span></span>
+        </a>
+      </li>
+      <li class="s4">
+        <a class="win" href="#/camdouglas.com">
+          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">camdouglas.com</span></span><span class="screen"><iframe src="https://camdouglas.com" title="Cam Douglas" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
+          <span class="cap"><b>Cam Douglas</b><span class="d">Tinkerer, solopreneur, creative technologist</span></span>
+        </a>
+      </li>
+      <li class="s5">
+        <a class="win" href="#/jinglelabs.com.au">
+          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">jinglelabs.com.au</span></span><span class="screen"><iframe src="https://jinglelabs.com.au" title="Jingle Labs" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
+          <span class="cap"><b>Jingle Labs</b><span class="d">Custom jingles that make a business memorable</span></span>
+        </a>
+      </li>
+      <li class="s6">
+        <a class="win" href="#/inspected-app.com">
+          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">inspected-app.com</span></span><span class="screen"><iframe src="https://inspected-app.com" title="inspected" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
+          <span class="cap"><b>inspected</b><span class="d">Virtual property viewings, tagged by AI</span></span>
+        </a>
+      </li>
+      <li class="s7">
+        <a class="win" href="#/enginelabs.com.au">
+          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">enginelabs.com.au</span></span><span class="screen"><iframe src="https://enginelabs.com.au" title="Engine Labs" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
+          <span class="cap"><b>Engine Labs</b><span class="d">An agentic company, building agentic companies</span></span>
+        </a>
+      </li>
+      <li class="s8">
+        <a class="win" href="#/puffpuffstop.com">
+          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">puffpuffstop.com</span></span><span class="screen"><iframe src="https://puffpuffstop.com" title="PuffPuffStop" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
+          <span class="cap"><b>PuffPuffStop</b><span class="d">Puff less. Breathe more.</span></span>
+        </a>
+      </li>
+    </ul>
+  </main>
 
-      <div class="w3-ui is-tl">
-        <button type="button" class="w3-btn is-ink" data-w3="home" aria-label="thewebsite.com.au, back to the surface">
-          <span>thewebsite.com.au<span class="w3-trail" data-w3="trail">/</span></span>
-        </button>
+  <footer class="foot">
+    <p>© 2026 <a href="https://camdouglas.com">Cam Douglas</a></p>
+  </footer>
+  <div class="viewer" hidden>
+    <div class="vbar">
+      <a class="vhome" href="#">thewebpage.com.au<span class="vtrail"></span></a>
+      <div class="vmenu">
+        <button type="button" class="vmenu-btn" aria-expanded="false" aria-controls="vreel">pages ▾</button>
+        <div class="vreel" id="vreel" hidden></div>
       </div>
-      <div class="w3-ui is-tr">
-        <button type="button" class="w3-btn" data-w3="auto" aria-pressed="false" aria-label="Keep zooming on its own" style="font-size:17px">∞</button>
-        <a class="w3-btn" href="https://camdouglas.com">contact</a>
-      </div>
-      <div class="w3-ui is-dial" data-w3="modes">
-        <div class="w3-dial" data-w3="dial" tabindex="0" role="slider" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1" aria-label="Scroll mode">
-          <i class="w3-tick" aria-hidden="true"></i>
-          <span data-w3="dial-num">1</span>
-        </div>
-        <button type="button" class="w3-btn" data-w3="apply" aria-pressed="false" aria-label="Enable or disable this mode">↻</button>
-        <p class="w3-tip" data-w3="tip" role="tooltip"></p>
-      </div>
-      <div class="w3-ui is-bl">
-        <span data-w3="hint">pick a mode, then press refresh</span>
-        <button type="button" class="w3-btn" data-w3="chip">Next site</button>
-        <button type="button" class="w3-btn" data-w3="leave">Leave site</button>
-      </div>
-      <div class="w3-ui is-br" data-w3="current"></div>
+      <a class="vout" href="#"></a>
     </div>
+    <iframe class="vframe" title="Site" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <button type="button" class="varrow prev" aria-label="Previous site">‹</button>
+    <button type="button" class="varrow next" aria-label="Next site">›</button>
   </div>
 </body>
 </html>
