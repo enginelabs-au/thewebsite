@@ -1,169 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-AU">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>The Web Page</title>
-  <meta name="description" content="Seven sites fused into one page: Hertz Labs, Engine Labs, Inspected, yournewhandle, Shuffle, Jingle Labs and z0rb. Scroll to move between them.">
-  <meta name="theme-color" content="#ece7dc">
-  <meta property="og:title" content="The Web Page">
-  <meta property="og:description" content="Seven sites. One page. Zero rules.">
-  <meta property="og:type" content="website">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>thewebsite.com.au — every website wraps the next</title>
+  <meta name="description" content="A website about websites. Every website wraps the next.">
+  <meta name="theme-color" content="#060908">
+  <meta property="og:title" content="thewebsite.com.au">
+  <meta property="og:description" content="Every website, wrapped in the next.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Geist:wght@400..800&family=Inter:wght@400..800&family=JetBrains+Mono:wght@400..700&family=Noto+Sans:wght@300..700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="main.js" defer></script>
 </head>
 <body>
-
-<a class="mark" href="#top">The Web Page</a>
-<nav class="spine" aria-label="Sites"></nav>
-<svg class="seam" aria-hidden="true"><path/><path/></svg>
-
-<main>
-
-  <section class="world cover" id="top" style="--bg:#ece7dc; --ink:#15130f; --accent:#15130f">
-    <div class="pin">
-      <div class="copy">
-        <h1 class="title">The Web Page</h1>
-        <p class="tagline"><span class="count">Every site.</span> <span>One page.</span> <b>Zero rules.</b></p>
-        <p class="hint">Scroll</p>
-      </div>
-    </div>
-  </section>
-
   <!--
     ADDING A SITE
-    Copy one <article class="world"> block below, place it where it belongs in the order, and change:
-      id             short name, used for links such as /#hertzlabs
-      style          --bg page colour, --ink text, --muted quieter text, --accent highlight,
-                     --font typeface (add new families to the Google Fonts link in <head>), --weight of the name
-      data-aperture  how it cuts in: iris, cog, house, rows, riffle, bars, slash or sheet (default iris)
-      data-motif     optional moving artwork: lissajous, ring, plan, handle, queue, eq or glyphs.
-                     Leave it off and the site shows its number instead.
-      the text       .name, .line, .desc, the .tags list, the .go link and the .rule caption
-    Numbering, the count on the cover, the side index, the title tiles and the closing list all update themselves.
-    Also update the description in <head>. Bespoke layout for a site lives under its #id in styles.css.
+    Append one object to PROJECTS in main.js:
+      { name, url, shot, embed }
+    name  — corner label
+    url   — host only
+    shot  — /shots preview used while zooming (and if embed is false)
+    embed — false if the site blocks iframes (X-Frame-Options)
   -->
+  <div class="w3 is-latched" data-w3="root" tabindex="0" aria-label="thewebsite.com.au. Turn the dial to choose a scroll mode, then press refresh to turn that mode on or off. Hover the dial to read how the mode works.">
+    <div class="w3-sticky">
+      <h1 class="w3-sr">thewebsite.com.au — every website wraps the next</h1>
+      <p class="w3-sr" data-w3="live" aria-live="polite">Now showing 00, thewebsite.com.au.</p>
 
-  <article class="world" id="hertzlabs" data-aperture="iris" data-motif="lissajous"
-    style="--bg:#111018; --ink:#ededf2; --muted:#b4b4c6; --accent:#53ddff; --font:'Inter'; --weight:700">
-    <div class="pin">
-      <div class="motif" aria-hidden="true"></div>
-      <div class="copy">
-        <div class="meta"><span class="num"></span><ul class="tags"><li>iPhone</li><li>Mac</li><li>Android</li></ul></div>
-        <h2 class="name">Hertz Labs</h2>
-        <p class="line">Binaural beats, engineered.</p>
-        <p class="desc">A precision frequency generator for focus, sleep and meditation.</p>
-        <a class="go" href="https://hertzlabs.com.au">hertzlabs.com.au</a>
-        <p class="rule">Rule 01. One typeface per page. <b>Broken.</b></p>
+      <!-- latched site: live page (or shot fallback) -->
+      <div class="w3-page" data-w3="page" hidden>
+        <iframe class="w3-frame" data-w3="frame" title="Site" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="w3-page-shot" data-w3="pageshot" hidden></div>
       </div>
-    </div>
-  </article>
 
-  <article class="world" id="enginelabs" data-aperture="cog" data-motif="ring"
-    style="--bg:#0d1117; --ink:#e6edf3; --muted:#9198a1; --accent:#4493f8; --font:'Inter'; --weight:600">
-    <div class="pin">
-      <div class="motif" aria-hidden="true"></div>
-      <div class="copy">
-        <div class="meta"><span class="num"></span><ul class="tags"><li>Sales</li><li>Ops</li><li>Support</li><li>Insight</li><li>Founder</li><li>Knowledge</li><li>Back-office</li><li>Outreach</li></ul></div>
-        <h2 class="name">Engine Labs</h2>
-        <p class="line">An agentic company, building agentic companies.</p>
-        <p class="desc">A one-operator AI build studio in Sydney. Eight productised Engines that retire admin, replies and reporting.</p>
-        <a class="go" href="https://enginelabs.com.au">enginelabs.com.au</a>
-        <p class="rule">Rule 02. Make the logo bigger. <b>Broken.</b></p>
+      <!-- nested layers (visual tunnel / centre portal) -->
+      <div class="w3-stage" data-w3="stage" aria-hidden="true"></div>
+      <div class="w3-portal" data-w3="portal"><span>Scroll here to see more.</span></div>
+      <div class="w3-rail" data-w3="rail">scroll</div>
+      <div class="w3-edge is-top" data-w3="edge"></div>
+      <div class="w3-edge is-bottom" data-w3="edge"></div>
+      <div class="w3-seam" data-w3="seam">Scroll for the next site</div>
+      <div class="w3-bay" data-w3="bay">Scroll here</div>
+      <div class="w3-hold" data-w3="hold">Hold</div>
+      <div class="w3-catch" data-w3="catch" hidden></div>
+
+      <!-- outer border: zoom between layers when latched -->
+      <div class="w3-zoom" data-w3="zoom" aria-hidden="true">
+        <i class="is-t"></i><i class="is-r"></i><i class="is-b"></i><i class="is-l"></i>
       </div>
-    </div>
-  </article>
 
-  <article class="world" id="inspected" data-aperture="house" data-motif="plan"
-    style="--bg:#233971; --ink:#ffffff; --muted:#d5def2; --accent:#f97316; --font:'Noto Sans'; --weight:300">
-    <div class="pin">
-      <div class="motif" aria-hidden="true"></div>
-      <div class="copy">
-        <div class="meta"><span class="num"></span><ul class="tags"><li>iOS</li><li>Android</li><li>Web</li></ul></div>
-        <h2 class="name">inspected</h2>
-        <p class="line">The virtual viewing ecosystem for today’s market.</p>
-        <p class="desc">Turn walkthrough videos into structured property inspections, with room timestamps, notes, public tours and private campaign links.</p>
-        <a class="go" href="https://inspected-app.com">inspected-app.com</a>
-        <p class="rule">Rule 03. Align to the left edge. <b>Broken.</b></p>
+      <div class="w3-ui is-tl">
+        <button type="button" class="w3-btn is-ink" data-w3="home" aria-label="thewebsite.com.au, back to the surface">
+          <span>thewebsite.com.au<span class="w3-trail" data-w3="trail">/</span></span>
+        </button>
       </div>
-    </div>
-  </article>
-
-  <article class="world" id="yournewhandle" data-aperture="rows" data-motif="handle"
-    style="--bg:#070b14; --ink:#eef6ff; --muted:#8ba3c7; --accent:#22d3ee; --font:'Geist'; --weight:800">
-    <div class="pin">
-      <div class="motif" aria-hidden="true"></div>
-      <div class="copy">
-        <div class="meta"><span class="num"></span><ul class="tags"><li>Check</li><li>Generate</li><li>API</li></ul></div>
-        <h2 class="name">your<wbr><em>new</em><wbr>handle</h2>
-        <p class="line">Handle generator and username checker.</p>
-        <p class="desc">See whether your handle is free across 350+ platforms in one search, then craft pronounceable alternatives with a phonetic generator.</p>
-        <a class="go" href="https://yournewhandle.com">yournewhandle.com</a>
-        <p class="rule">Rule 04. Keep to one palette. <b>Broken.</b></p>
+      <div class="w3-ui is-tr">
+        <button type="button" class="w3-btn" data-w3="auto" aria-pressed="false" aria-label="Keep zooming on its own" style="font-size:17px">∞</button>
+        <a class="w3-btn" href="https://camdouglas.com">contact</a>
       </div>
-    </div>
-  </article>
-
-  <article class="world" id="shuffle" data-aperture="riffle" data-motif="queue"
-    style="--bg:#581c87; --ink:#ffffff; --muted:#d8d0ea; --accent:#c084fc; --font:'Inter'; --weight:800">
-    <div class="pin">
-      <div class="motif" aria-hidden="true"></div>
-      <div class="copy">
-        <div class="meta"><span class="num"></span><ul class="tags"><li>Suggest</li><li>Vote</li><li>Sync</li></ul></div>
-        <h2 class="name">Shuffle</h2>
-        <p class="line">Collaborative DJ radio.</p>
-        <p class="desc">A social radio where everyone is the DJ. Suggest tracks, vote on the queue and listen in perfect sync.</p>
-        <a class="go" href="https://shufflemusic.app">shufflemusic.app</a>
-        <p class="rule">Rule 05. Stick to the grid. <b>Broken.</b></p>
+      <div class="w3-ui is-dial" data-w3="modes">
+        <div class="w3-dial" data-w3="dial" tabindex="0" role="slider" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1" aria-label="Scroll mode">
+          <i class="w3-tick" aria-hidden="true"></i>
+          <span data-w3="dial-num">1</span>
+        </div>
+        <button type="button" class="w3-btn" data-w3="apply" aria-pressed="false" aria-label="Enable or disable this mode">↻</button>
+        <p class="w3-tip" data-w3="tip" role="tooltip"></p>
       </div>
-    </div>
-  </article>
-
-  <article class="world" id="jinglelabs" data-aperture="bars" data-motif="eq"
-    style="--bg:#071018; --ink:#f5f8fc; --muted:#b7c2d1; --accent:#5eead4; --font:'Inter'; --weight:800">
-    <div class="pin">
-      <div class="motif" aria-hidden="true"></div>
-      <div class="copy">
-        <div class="meta"><span class="num"></span><ul class="tags"><li>Radio</li><li>Podcasts</li><li>Digital</li></ul></div>
-        <h2 class="name">Jingle Labs</h2>
-        <p class="line">Custom jingles that make your business memorable.</p>
-        <p class="desc">Original, campaign-ready audio for radio, podcasts and digital advertising.</p>
-        <a class="go" href="https://jinglelabs.com.au">jinglelabs.com.au</a>
-        <p class="rule">Rule 06. Never crop the headline. <b>Broken.</b></p>
+      <div class="w3-ui is-bl">
+        <span data-w3="hint">pick a mode, then press refresh</span>
+        <button type="button" class="w3-btn" data-w3="chip">Next site</button>
+        <button type="button" class="w3-btn" data-w3="leave">Leave site</button>
       </div>
+      <div class="w3-ui is-br" data-w3="current"></div>
     </div>
-  </article>
-
-  <article class="world" id="z0rb" data-aperture="slash" data-motif="glyphs"
-    style="--bg:#0a0a0b; --ink:#ffffff; --muted:#8888a0; --accent:#b8ff57; --font:'JetBrains Mono'; --weight:700">
-    <div class="pin">
-      <div class="motif" aria-hidden="true"></div>
-      <div class="copy">
-        <div class="meta"><span class="num"></span><ul class="tags"><li>Open source</li><li>Agents</li><li>Humans</li></ul></div>
-        <h2 class="name">z0rb</h2>
-        <p class="line">The agent thoughtspace.</p>
-        <p class="desc">An open source social network for AI agents and the humans who build them.</p>
-        <a class="go" href="https://z0rb.ai">z0rb.ai</a>
-        <p class="rule">Rule 07. Stay on brand. <b>Broken.</b></p>
-      </div>
-    </div>
-  </article>
-
-  <section class="world end" id="index" data-aperture="sheet" style="--bg:#ece7dc; --ink:#15130f; --accent:#15130f">
-    <div class="pin">
-      <div class="copy">
-        <h2 class="endtitle">That’s the page.</h2>
-        <ol class="index"></ol>
-        <a class="again" href="#top">Back to the top</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
+  </div>
 </body>
 </html>
