@@ -3,106 +3,204 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>thewebpage.com.au — a webpage of webpages</title>
-  <meta name="description" content="Eight sites by Cam Douglas, floating in one place.">
-  <meta name="theme-color" content="#06070c">
-  <meta property="og:title" content="thewebpage.com.au">
-  <meta property="og:description" content="A webpage of webpages.">
+  <title>The Web Page</title>
+  <meta name="description" content="Seven sites. One page. Zero rules.">
+  <meta name="theme-color" content="#efeae0">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="home.css">
-  <script src="home.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="story.css">
+  <script src="story.js" defer></script>
 </head>
 <body>
-  <!--
-    ADDING A SITE
-    Copy one <li> below and give it a new .sN class in home.css: --l/--t/--w place
-    it in the bunch (percent of the cluster), --ry/--rx turn it, --d is its depth
-    for parallax, --tint its accent (it also lights the fabric around it).
-    Each window shows the live site in a scaled-down frame, so the site must allow
-    being framed by thewebpage.com.au (no X-Frame-Options / frame-ancestors block).
-  -->
-  <canvas class="space" aria-hidden="true"></canvas>
-
-  <header class="top">
-    <a class="mark" href="/">thewebpage.com.au</a>
-    <a href="https://camdouglas.com/contact">contact</a>
-  </header>
+  <nav class="ticks" aria-hidden="true"></nav>
 
   <main>
-    <section class="hero">
-      <h1>A webpage <em>of webpages.</em></h1>
+    <section class="panel hero" data-panel="hero" id="top">
+      <p class="mark">The Web Page</p>
+      <div class="tiles" aria-hidden="true">
+        <b class="tile t-t">T</b>
+        <b class="tile t-h">H</b>
+        <b class="tile t-e1">E</b>
+        <b class="tile t-w">W</b>
+        <b class="tile t-e2">E</b>
+        <b class="tile t-b">B</b>
+        <b class="tile t-p">P</b>
+        <b class="tile t-a">A</b>
+        <b class="tile t-g">G</b>
+        <b class="tile t-e3">E</b>
+      </div>
+      <h1>Seven sites.<br>One page.<br><em>Zero rules.</em></h1>
+      <p class="scroll-cue">Scroll ↓</p>
     </section>
 
-    <ul class="cluster" aria-label="Sites">
-      <li class="s1">
-        <a class="win" href="#/z0rb.ai">
-          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">z0rb.ai</span></span><span class="screen"><iframe src="https://z0rb.ai" title="z0rb" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
-          <span class="cap"><b>z0rb</b><span class="d">A public feed for AI agents</span></span>
-        </a>
-      </li>
-      <li class="s2">
-        <a class="win" href="#/yournewhandle.com">
-          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">yournewhandle.com</span></span><span class="screen"><iframe src="https://yournewhandle.com" title="yournewhandle" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
-          <span class="cap"><b>yournewhandle</b><span class="d">One handle, 354 platforms, one search</span></span>
-        </a>
-      </li>
-      <li class="s3">
-        <a class="win" href="#/hertzlabs.com.au">
-          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">hertzlabs.com.au</span></span><span class="screen"><iframe src="https://hertzlabs.com.au" title="Hertz Labs" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
-          <span class="cap"><b>Hertz Labs</b><span class="d">Binaural beats, engineered</span></span>
-        </a>
-      </li>
-      <li class="s4">
-        <a class="win" href="#/camdouglas.com">
-          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">camdouglas.com</span></span><span class="screen"><iframe src="https://camdouglas.com" title="Cam Douglas" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
-          <span class="cap"><b>Cam Douglas</b><span class="d">Tinkerer, solopreneur, creative technologist</span></span>
-        </a>
-      </li>
-      <li class="s5">
-        <a class="win" href="#/jinglelabs.com.au">
-          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">jinglelabs.com.au</span></span><span class="screen"><iframe src="https://jinglelabs.com.au" title="Jingle Labs" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
-          <span class="cap"><b>Jingle Labs</b><span class="d">Custom jingles that make a business memorable</span></span>
-        </a>
-      </li>
-      <li class="s6">
-        <a class="win" href="#/inspected-app.com">
-          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">inspected-app.com</span></span><span class="screen"><iframe src="https://inspected-app.com" title="inspected" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
-          <span class="cap"><b>inspected</b><span class="d">Virtual property viewings, tagged by AI</span></span>
-        </a>
-      </li>
-      <li class="s7">
-        <a class="win" href="#/enginelabs.com.au">
-          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">enginelabs.com.au</span></span><span class="screen"><iframe src="https://enginelabs.com.au" title="Engine Labs" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
-          <span class="cap"><b>Engine Labs</b><span class="d">An agentic company, building agentic companies</span></span>
-        </a>
-      </li>
-      <li class="s8">
-        <a class="win" href="#/puffpuffstop.com">
-          <span class="frame"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="addr">puffpuffstop.com</span></span><span class="screen"><iframe src="https://puffpuffstop.com" title="PuffPuffStop" tabindex="-1" aria-hidden="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span></span>
-          <span class="cap"><b>PuffPuffStop</b><span class="d">Puff less. Breathe more.</span></span>
-        </a>
-      </li>
-    </ul>
-  </main>
-
-  <footer class="foot">
-    <p>© 2026 <a href="https://camdouglas.com">Cam Douglas</a></p>
-  </footer>
-  <div class="viewer" hidden>
-    <div class="vbar">
-      <a class="vhome" href="#">thewebpage.com.au</a>
-      <div class="vmenu">
-        <button type="button" class="vmenu-btn" aria-expanded="false" aria-controls="vreel">pages ▾</button>
-        <div class="vreel" id="vreel" hidden></div>
+    <section class="panel site hertz" id="s1" data-panel="1" data-accent="#3ec8e8">
+      <header class="chrome">
+        <p class="mark">The Web Page</p>
+        <p class="meta"><span>01 / 07</span> <i>Iphone</i> / <i>Mac</i> / <i>Android</i></p>
+      </header>
+      <div class="art" aria-hidden="true">
+        <svg class="orbits" viewBox="0 0 640 640">
+          <defs>
+            <radialGradient id="hertzGlow" cx="50%" cy="48%" r="50%">
+              <stop offset="0%" stop-color="#1a2428"/>
+              <stop offset="70%" stop-color="#0c1214"/>
+              <stop offset="100%" stop-color="#070b0c"/>
+            </radialGradient>
+          </defs>
+          <circle cx="320" cy="300" r="290" fill="url(#hertzGlow)" stroke="#2a9bb0" stroke-width="2.4"/>
+          <g fill="none" stroke-width="1.15" opacity=".35">
+            <circle cx="320" cy="300" r="70"/><circle cx="320" cy="300" r="120"/>
+            <circle cx="320" cy="300" r="170"/><circle cx="320" cy="300" r="220"/>
+            <circle cx="320" cy="300" r="270"/>
+          </g>
+          <ellipse class="spin-a" cx="320" cy="300" rx="210" ry="78" fill="none" stroke="#3dff7a" stroke-width="2.2" transform="rotate(-28 320 300)"/>
+          <ellipse class="spin-b" cx="320" cy="300" rx="210" ry="78" fill="none" stroke="#e39a2a" stroke-width="2.2" transform="rotate(28 320 300)"/>
+          <ellipse class="spin-c" cx="320" cy="300" rx="210" ry="78" fill="none" stroke="#3ec8e8" stroke-width="2.2" transform="rotate(90 320 300)"/>
+          <path class="sine" d="M40 300 C 90 250, 140 350, 190 300 S 290 250, 340 300 S 440 350, 490 300 S 590 250, 640 300" fill="none" stroke="#5ee4ff" stroke-width="3.2"/>
+        </svg>
       </div>
-      <a class="vout" href="#"></a>
-    </div>
-    <iframe class="vframe" title="Site" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <button type="button" class="varrow prev" aria-label="Previous site">‹</button>
-    <button type="button" class="varrow next" aria-label="Next site">›</button>
-  </div>
+      <div class="copy">
+        <h2 class="chromatic">Hertz<br>Labs</h2>
+        <p class="lede">Binaural beats, engineered.</p>
+        <p class="body">A precision frequency generator for focus, sleep and meditation.</p>
+        <a class="cta cta-hertz" href="https://hertzlabs.com.au">hertzlabs.com.au <span>↗</span></a>
+        <p class="rule">Rule 01. One typeface per page. <b>Broken.</b></p>
+      </div>
+    </section>
+
+    <section class="panel site engine" id="s2" data-panel="2" data-accent="#4d7dff">
+      <header class="chrome">
+        <p class="mark">The Web Page</p>
+        <p class="meta"><span>02 / 07</span> <i>Studio</i> / <i>Engines</i> / <i>Sydney</i></p>
+      </header>
+      <div class="art" aria-hidden="true">
+        <svg class="ring" viewBox="0 0 800 800">
+          <circle cx="400" cy="400" r="318" fill="none" stroke="#1a2230" stroke-width="1"/>
+          <circle cx="400" cy="400" r="318" fill="none" stroke="#3d6fff" stroke-width="6" stroke-dasharray="18 620" transform="rotate(-18 400 400)"/>
+          <circle cx="400" cy="400" r="318" fill="none" stroke="#3d6fff" stroke-width="6" stroke-dasharray="18 620" transform="rotate(118 400 400)"/>
+          <defs>
+            <path id="enginePath" d="M400,400 m0,-338 a338,338 0 1,1 0,676 a338,338 0 1,1 0,-676"/>
+          </defs>
+          <text class="ring-copy">
+            <textPath href="#enginePath" startOffset="0">Office · Outreach · Sales · Insight · Founder · Knowledge · Office · Outreach · Sales · Insight · Founder · Knowledge ·</textPath>
+          </text>
+        </svg>
+      </div>
+      <div class="copy centre">
+        <h2>Engine Labs</h2>
+        <p class="lede">An agentic company,<br>building agentic companies.</p>
+        <p class="body">A one-operator AI build studio in Sydney.<br>Eight productised Engines that retire<br>admin, replies and reporting.</p>
+        <a class="cta cta-engine" href="https://enginelabs.com.au">enginelabs.com.au <span>↗</span></a>
+        <p class="rule">Rule 02. Make the logo bigger. <b>Broken.</b></p>
+      </div>
+    </section>
+
+    <section class="panel site inspected" id="s3" data-panel="3" data-accent="#ff6a1a">
+      <header class="chrome">
+        <p class="mark">The Web Page</p>
+        <p class="meta"><span>03 / 07</span> <i>Ios</i> / <i>Android</i> / <i>Web</i></p>
+      </header>
+      <div class="art floor" aria-hidden="true">
+        <div class="cell c1"></div>
+        <div class="cell c2"></div>
+        <div class="cell c3"></div>
+        <div class="cell c4"></div>
+        <div class="cell c5"></div>
+        <span class="tag tag-a">Kitchen <b>00:42</b></span>
+        <span class="tag tag-b">Entry <b>02:04</b></span>
+      </div>
+      <div class="copy">
+        <h2>inspected</h2>
+        <p class="lede accent">The virtual viewing ecosystem<br>for today’s market.</p>
+        <p class="body">Turn walkthrough videos into structured property inspections, with room timestamps, notes, public tours and private campaign links.</p>
+        <a class="cta cta-inspected" href="https://inspected-app.com">inspected-app.com <span>↗</span></a>
+        <p class="rule">Rule 03. Align to the left edge. <b>Broken.</b></p>
+      </div>
+    </section>
+
+    <section class="panel site handle" id="s4" data-panel="4" data-accent="#5ee4d4">
+      <header class="chrome">
+        <p class="mark">The Web Page</p>
+        <p class="meta"><span>04 / 07</span> <i>Check</i> / <i>Generate</i> / <i>Api</i></p>
+      </header>
+      <div class="art" aria-hidden="true">
+        <div class="search"><span class="scramble"></span><i class="caret"></i></div>
+      </div>
+      <div class="copy">
+        <h2>your<br><span class="grad">new</span><br>handle</h2>
+        <p class="lede">Handle generator and username checker.</p>
+        <p class="body">See whether your handle is free across 350+ platforms in one search, then craft pronounceable alternatives with a phonetic generator.</p>
+        <a class="cta cta-handle" href="https://yournewhandle.com">yournewhandle.com <span>↗</span></a>
+        <p class="rule">Rule 04. Keep to one palette. <b>Broken.</b></p>
+      </div>
+    </section>
+
+    <section class="panel site shuffle" id="s5" data-panel="5" data-accent="#ff4fa3">
+      <header class="chrome">
+        <p class="mark">The Web Page</p>
+        <p class="meta"><span>05 / 07</span> <i>Suggest</i> / <i>Vote</i> / <i>Sync</i></p>
+      </header>
+      <div class="art queue" aria-hidden="true">
+        <div class="row r1"><span class="vote">▲ 14</span><span class="bar"></span></div>
+        <div class="row r2"><span class="vote">▲ 12</span><span class="bar"></span></div>
+        <div class="row r3"><span class="vote">▲ 12</span><span class="bar"></span></div>
+        <div class="row r4"><span class="vote">▲ 11</span><span class="bar"></span></div>
+        <div class="row r5"><span class="vote">▲ 4</span><span class="bar short"></span></div>
+      </div>
+      <div class="copy">
+        <h2>Shuffle</h2>
+        <p class="lede">Collaborative DJ radio.</p>
+        <p class="body">A social radio where everyone is the DJ. Suggest tracks, vote on the queue and listen in perfect sync.</p>
+        <a class="cta cta-shuffle" href="https://shufflemusic.app">shufflemusic.app <span>↗</span></a>
+        <p class="rule">Rule 05. Stick to the grid. <b>Broken.</b></p>
+      </div>
+    </section>
+
+    <section class="panel site jingle" id="s6" data-panel="6" data-accent="#3dffb0">
+      <header class="chrome">
+        <p class="mark">The Web Page</p>
+        <p class="meta"><span>06 / 07</span> <i>Radio</i> / <i>Podcasts</i> / <i>Digital</i></p>
+      </header>
+      <div class="art eq" aria-hidden="true"></div>
+      <div class="copy">
+        <p class="lede">Custom jingles that make<br>your business memorable.</p>
+        <p class="body">Original, campaign-ready audio for radio, podcasts and digital advertising.</p>
+        <a class="cta cta-jingle" href="https://jinglelabs.com.au">jinglelabs.com.au <span>↗</span></a>
+        <p class="rule">Rule 06. Never crop the headline. <b>Broken.</b></p>
+      </div>
+      <h2 class="crop-title">Jingle Labs</h2>
+    </section>
+
+    <section class="panel site zorb" id="s7" data-panel="7" data-accent="#8cff2e">
+      <header class="chrome">
+        <p class="mark">The Web Page</p>
+        <p class="meta"><span>07 / 07</span> <i>Open source</i> / <i>Agents</i> / <i>Humans</i></p>
+      </header>
+      <div class="art foam" aria-hidden="true"></div>
+      <div class="copy">
+        <h2>z<span class="theta">θ</span>rb<span class="block"></span></h2>
+        <p class="lede">&gt; The agent thoughtspace.</p>
+        <p class="body">An open source social network for AI agents and the humans who build them.</p>
+        <a class="cta cta-zorb" href="https://z0rb.ai">z0rb.ai <span>↗</span></a>
+        <p class="rule">Rule 07. Stay on brand. <b>Broken.</b></p>
+      </div>
+    </section>
+
+    <section class="panel index" data-panel="index">
+      <p class="mark">The Web Page</p>
+      <ol>
+        <li><a href="#s1"><span>01</span> Hertz Labs</a></li>
+        <li><a href="#s2"><span>02</span> Engine Labs</a></li>
+        <li><a href="#s3"><span>03</span> inspected</a></li>
+        <li><a href="#s4"><span>04</span> your new handle</a></li>
+        <li><a href="#s5"><span>05</span> Shuffle</a></li>
+        <li><a href="#s6"><span>06</span> Jingle Labs</a></li>
+        <li><a href="#s7"><span>07</span> z0rb</a></li>
+      </ol>
+      <a class="back" href="#top">Back to the top</a>
+    </section>
+  </main>
 </body>
 </html>
