@@ -17,49 +17,33 @@
   <nav class="ticks" aria-hidden="true"></nav>
 
   <main>
-    <section class="panel hero" data-panel="hero" id="top">
+    <section class="panel hero" data-panel="hero" data-tick="#111318" id="top">
       <p class="mark">The Web Page</p>
-      <div class="tiles" aria-hidden="true">
-        <b class="tile t-t">T</b>
-        <b class="tile t-h">H</b>
-        <b class="tile t-e1">E</b>
-        <b class="tile t-w">W</b>
-        <b class="tile t-e2">E</b>
-        <b class="tile t-b">B</b>
-        <b class="tile t-p">P</b>
-        <b class="tile t-a">A</b>
-        <b class="tile t-g">G</b>
-        <b class="tile t-e3">E</b>
+      <div class="hero-block">
+        <div class="tiles" aria-hidden="true">
+          <b class="tile" data-i="0">T</b>
+          <b class="tile" data-i="1">H</b>
+          <b class="tile" data-i="2">E</b>
+          <b class="tile" data-i="3">W</b>
+          <b class="tile" data-i="4">E</b>
+          <b class="tile" data-i="5">B</b>
+          <b class="tile" data-i="6">P</b>
+          <b class="tile" data-i="7">A</b>
+          <b class="tile" data-i="8">G</b>
+          <b class="tile" data-i="9">E</b>
+        </div>
+        <h1>Seven sites.<br>One page.<br><em>Zero rules.</em></h1>
       </div>
-      <h1>Seven sites.<br>One page.<br><em>Zero rules.</em></h1>
       <p class="scroll-cue">Scroll ↓</p>
     </section>
 
-    <section class="panel site hertz" id="s1" data-panel="1" data-accent="#3ec8e8">
+    <section class="panel site hertz" id="s1" data-panel="1" data-accent="#3ec8e8" data-tick="#f4f7ff">
       <header class="chrome">
         <p class="mark">The Web Page</p>
         <p class="meta"><span>01 / 07</span> <i>Iphone</i> / <i>Mac</i> / <i>Android</i></p>
       </header>
       <div class="art" aria-hidden="true">
-        <svg class="orbits" viewBox="0 0 640 640">
-          <defs>
-            <radialGradient id="hertzGlow" cx="50%" cy="48%" r="50%">
-              <stop offset="0%" stop-color="#1a2428"/>
-              <stop offset="70%" stop-color="#0c1214"/>
-              <stop offset="100%" stop-color="#070b0c"/>
-            </radialGradient>
-          </defs>
-          <circle cx="320" cy="300" r="290" fill="url(#hertzGlow)" stroke="#2a9bb0" stroke-width="2.4"/>
-          <g fill="none" stroke-width="1.15" opacity=".35">
-            <circle cx="320" cy="300" r="70"/><circle cx="320" cy="300" r="120"/>
-            <circle cx="320" cy="300" r="170"/><circle cx="320" cy="300" r="220"/>
-            <circle cx="320" cy="300" r="270"/>
-          </g>
-          <ellipse class="spin-a" cx="320" cy="300" rx="210" ry="78" fill="none" stroke="#3dff7a" stroke-width="2.2" transform="rotate(-28 320 300)"/>
-          <ellipse class="spin-b" cx="320" cy="300" rx="210" ry="78" fill="none" stroke="#e39a2a" stroke-width="2.2" transform="rotate(28 320 300)"/>
-          <ellipse class="spin-c" cx="320" cy="300" rx="210" ry="78" fill="none" stroke="#3ec8e8" stroke-width="2.2" transform="rotate(90 320 300)"/>
-          <path class="sine" d="M40 300 C 90 250, 140 350, 190 300 S 290 250, 340 300 S 440 350, 490 300 S 590 250, 640 300" fill="none" stroke="#5ee4ff" stroke-width="3.2"/>
-        </svg>
+        <canvas class="orbits"></canvas>
       </div>
       <div class="copy">
         <h2 class="chromatic">Hertz<br>Labs</h2>
@@ -70,18 +54,22 @@
       </div>
     </section>
 
-    <section class="panel site engine" id="s2" data-panel="2" data-accent="#4d7dff">
+    <section class="panel site engine" id="s2" data-panel="2" data-accent="#4d7dff" data-tick="#f4f7ff">
       <header class="chrome">
         <p class="mark">The Web Page</p>
-        <p class="meta"><span>02 / 07</span> <i>Studio</i> / <i>Engines</i> / <i>Sydney</i></p>
+        <p class="meta"><span>02 / 07</span></p>
       </header>
       <div class="art" aria-hidden="true">
         <svg class="ring" viewBox="0 0 800 800">
-          <circle cx="400" cy="400" r="318" fill="none" stroke="#1a2230" stroke-width="1"/>
-          <circle cx="400" cy="400" r="318" fill="none" stroke="#3d6fff" stroke-width="6" stroke-dasharray="18 620" transform="rotate(-18 400 400)"/>
-          <circle cx="400" cy="400" r="318" fill="none" stroke="#3d6fff" stroke-width="6" stroke-dasharray="18 620" transform="rotate(118 400 400)"/>
+          <circle cx="400" cy="400" r="328" fill="none" stroke="#2a3344" stroke-width="1.2"/>
+          <g class="ring-ticks" stroke="#3d6fff" stroke-width="7" stroke-linecap="butt">
+            <line x1="400" y1="56" x2="400" y2="28"/>
+            <line x1="744" y1="400" x2="772" y2="400"/>
+            <line x1="400" y1="744" x2="400" y2="772"/>
+            <line x1="56" y1="400" x2="28" y2="400"/>
+          </g>
           <defs>
-            <path id="enginePath" d="M400,400 m0,-338 a338,338 0 1,1 0,676 a338,338 0 1,1 0,-676"/>
+            <path id="enginePath" d="M400,400 m0,-348 a348,348 0 1,1 0,696 a348,348 0 1,1 0,-696"/>
           </defs>
           <text class="ring-copy">
             <textPath href="#enginePath" startOffset="0">Office · Outreach · Sales · Insight · Founder · Knowledge · Office · Outreach · Sales · Insight · Founder · Knowledge ·</textPath>
@@ -97,19 +85,18 @@
       </div>
     </section>
 
-    <section class="panel site inspected" id="s3" data-panel="3" data-accent="#ff6a1a">
+    <section class="panel site inspected" id="s3" data-panel="3" data-accent="#ff6a1a" data-tick="#e3b07a">
       <header class="chrome">
         <p class="mark">The Web Page</p>
-        <p class="meta"><span>03 / 07</span> <i>Ios</i> / <i>Android</i> / <i>Web</i></p>
       </header>
+      <p class="meta centred"><span>03 / 07</span> <i>Ios</i> / <i>Android</i> / <i>Web</i></p>
       <div class="art floor" aria-hidden="true">
         <div class="cell c1"></div>
         <div class="cell c2"></div>
         <div class="cell c3"></div>
         <div class="cell c4"></div>
         <div class="cell c5"></div>
-        <span class="tag tag-a">Kitchen <b>00:42</b></span>
-        <span class="tag tag-b">Entry <b>02:04</b></span>
+        <span class="tag" data-tag></span>
       </div>
       <div class="copy">
         <h2>inspected</h2>
@@ -120,24 +107,24 @@
       </div>
     </section>
 
-    <section class="panel site handle" id="s4" data-panel="4" data-accent="#5ee4d4">
+    <section class="panel site handle" id="s4" data-panel="4" data-accent="#5ee4d4" data-tick="#f4f7ff">
       <header class="chrome">
         <p class="mark">The Web Page</p>
         <p class="meta"><span>04 / 07</span> <i>Check</i> / <i>Generate</i> / <i>Api</i></p>
       </header>
       <div class="art" aria-hidden="true">
-        <div class="search"><span class="scramble"></span><i class="caret"></i></div>
+        <div class="search"><span class="at">@</span><span class="scramble"></span><i class="caret"></i></div>
       </div>
       <div class="copy">
         <h2>your<br><span class="grad">new</span><br>handle</h2>
-        <p class="lede">Handle generator and username checker.</p>
+        <p class="lede">Handle generator and<br>username checker.</p>
         <p class="body">See whether your handle is free across 350+ platforms in one search, then craft pronounceable alternatives with a phonetic generator.</p>
         <a class="cta cta-handle" href="https://yournewhandle.com">yournewhandle.com <span>↗</span></a>
         <p class="rule">Rule 04. Keep to one palette. <b>Broken.</b></p>
       </div>
     </section>
 
-    <section class="panel site shuffle" id="s5" data-panel="5" data-accent="#ff4fa3">
+    <section class="panel site shuffle" id="s5" data-panel="5" data-accent="#ff4fa3" data-tick="#d6ff3a">
       <header class="chrome">
         <p class="mark">The Web Page</p>
         <p class="meta"><span>05 / 07</span> <i>Suggest</i> / <i>Vote</i> / <i>Sync</i></p>
@@ -158,7 +145,7 @@
       </div>
     </section>
 
-    <section class="panel site jingle" id="s6" data-panel="6" data-accent="#3dffb0">
+    <section class="panel site jingle" id="s6" data-panel="6" data-accent="#5ee4d4" data-tick="#f4f7ff">
       <header class="chrome">
         <p class="mark">The Web Page</p>
         <p class="meta"><span>06 / 07</span> <i>Radio</i> / <i>Podcasts</i> / <i>Digital</i></p>
@@ -173,14 +160,14 @@
       <h2 class="crop-title">Jingle Labs</h2>
     </section>
 
-    <section class="panel site zorb" id="s7" data-panel="7" data-accent="#8cff2e">
+    <section class="panel site zorb" id="s7" data-panel="7" data-accent="#8cff2e" data-tick="#f4f7ff">
       <header class="chrome">
         <p class="mark">The Web Page</p>
         <p class="meta"><span>07 / 07</span> <i>Open source</i> / <i>Agents</i> / <i>Humans</i></p>
       </header>
       <div class="art foam" aria-hidden="true"></div>
       <div class="copy">
-        <h2>z<span class="theta">θ</span>rb<span class="block"></span></h2>
+        <h2>z<span class="zero"></span>rb</h2>
         <p class="lede">&gt; The agent thoughtspace.</p>
         <p class="body">An open source social network for AI agents and the humans who build them.</p>
         <a class="cta cta-zorb" href="https://z0rb.ai">z0rb.ai <span>↗</span></a>
@@ -188,16 +175,17 @@
       </div>
     </section>
 
-    <section class="panel index" data-panel="index">
+    <section class="panel index" data-panel="index" data-tick="#111318">
       <p class="mark">The Web Page</p>
+      <h2>That’s the page.</h2>
       <ol>
         <li><a href="#s1"><span>01</span> Hertz Labs</a></li>
         <li><a href="#s2"><span>02</span> Engine Labs</a></li>
-        <li><a href="#s3"><span>03</span> inspected</a></li>
-        <li><a href="#s4"><span>04</span> your new handle</a></li>
+        <li><a href="#s3" class="light"><span>03</span> inspected</a></li>
+        <li><a href="#s4"><span>04</span> yournewhandle</a></li>
         <li><a href="#s5"><span>05</span> Shuffle</a></li>
         <li><a href="#s6"><span>06</span> Jingle Labs</a></li>
-        <li><a href="#s7"><span>07</span> z0rb</a></li>
+        <li><a href="#s7" class="zmark"><span>07</span> z0rb</a></li>
       </ol>
       <a class="back" href="#top">Back to the top</a>
     </section>
